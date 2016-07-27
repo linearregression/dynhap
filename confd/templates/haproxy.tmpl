@@ -39,6 +39,6 @@ backend static_server_common
   mode http
   option forwardfor
 
-{{range getvs "/upstreams/*"}}
+{{range getvs "/upstreams/default/*"}}
   server {{.}} check
 {{end}}
