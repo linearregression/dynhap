@@ -703,11 +703,13 @@
     },
     "DdfRepoPath": {
       "Type": "String",
-      "Description": "ddf repositories path"
+      "Description": "ddf repositories path",
+      "Default": "/home/waffle-server/ddf"
     },
     "DefaultUserPassword": {
       "Type": "String",
-      "Description": ""
+      "Description": "",
+      "Default": "1111"
     }
   },
   "Mappings": {
