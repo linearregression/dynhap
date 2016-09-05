@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 
 RUN apt-get update
-RUN apt-get install -y wget curl haproxy redis-server libnl-utils
+RUN apt-get install -y wget curl haproxy libnl-utils
 RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 RUN apt-get install -y nodejs
 
@@ -17,12 +17,10 @@ RUN mkdir /etc/confd
 COPY ./haproxy_gracefull_reload.sh ./haproxy_gracefull_reload.sh
 COPY ./confd /etc/confd
 COPY ./run.sh run.sh
-COPY ./ipb.js ipb.js
-COPY ./redis.conf /etc/redis/
 
 RUN chmod +x run.sh
 RUN chmod +x haproxy_gracefull_reload.sh
 
-EXPOSE 80 6379 8099
+EXPOSE 80 433
 
 CMD ["/home/run.sh"]
