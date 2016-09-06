@@ -1132,7 +1132,7 @@
         "IamInstanceProfile": {
           "Ref": "wsEcsInstanceProfile"
         },
-        "InstanceMonitoring": "true",
+        "InstanceMonitoring": "false",
         "EbsOptimized": "false",
         "AssociatePublicIpAddress": "true",
         "ImageId": {
@@ -1388,7 +1388,7 @@
         "IamInstanceProfile": {
           "Ref": "wsEcsInstanceProfile"
         },
-        "InstanceMonitoring": "true",
+        "InstanceMonitoring": "false",
         "EbsOptimized": "false",
         "AssociatePublicIpAddress": "true",
         "ImageId": {
