@@ -654,9 +654,19 @@
       "Type": "String",
       "Description": "Name of load balancer ECR."
     },
+    "DockerLoadBalancerECRlabel": {
+      "Type": "String",
+      "Description": "Docker image label",
+      "Default": "latest"
+    },
     "DockerNodeECRname": {
       "Type": "String",
       "Description": "Name of node ECR."
+    },
+    "DockerNodeECRlabel": {
+      "Type": "String",
+      "Description": "Docker image label",
+      "Default": "latest"
     },
     "SshKeyName": {
       "Type": "AWS::EC2::KeyPair::KeyName",
@@ -766,7 +776,7 @@
                     "Ref": "DockerLoadBalancerECRname"
                   },
                   ":",
-                  "latest"
+                  {"Ref": "DockerLoadBalancerECRlabel"}
                 ]
               ]
             },
@@ -888,7 +898,7 @@
                     "Ref": "DockerNodeECRname"
                   },
                   ":",
-                  "latest"
+                  {"Ref": "DockerNodeECRlabel"}
                 ]
               ]
             },
